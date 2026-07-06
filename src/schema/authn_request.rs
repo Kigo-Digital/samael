@@ -93,7 +93,7 @@ impl FromStr for AuthnRequest {
     type Err = Error;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Ok(quick_xml::de::from_str(s)?)
+        Ok(crate::deserialize::from_str(s)?)
     }
 }
 

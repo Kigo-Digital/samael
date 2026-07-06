@@ -3,6 +3,7 @@
 ### Unreleased
 
 - add `EncryptedAssertion` and ability to decrypt it
+- Bump `quick-xml` to 0.41 (resolves RUSTSEC-2026-0194 and RUSTSEC-2026-0195, both fixed in quick-xml >= 0.41). Restores the pre-0.38 behavior of trimming leading/trailing whitespace from element text on deserialization (quick-xml 0.38+ preserves it per the XML Schema `xs:string` facet), so pretty-printed IdP metadata and responses continue to parse to the same values.
 
 ## 0.0.18
 

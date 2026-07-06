@@ -106,7 +106,7 @@ impl FromStr for LogoutRequest {
     type Err = LogoutRequestError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Ok(quick_xml::de::from_str(s)?)
+        Ok(crate::deserialize::from_str(s)?)
     }
 }
 
@@ -217,7 +217,7 @@ impl FromStr for Assertion {
     type Err = Box<dyn std::error::Error>;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Ok(quick_xml::de::from_str(s)?)
+        Ok(crate::deserialize::from_str(s)?)
     }
 }
 
@@ -705,7 +705,7 @@ impl FromStr for LogoutResponse {
     type Err = LogoutResponseError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Ok(quick_xml::de::from_str(s)?)
+        Ok(crate::deserialize::from_str(s)?)
     }
 }
 

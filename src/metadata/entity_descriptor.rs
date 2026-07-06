@@ -39,7 +39,7 @@ impl FromStr for EntityDescriptorType {
     type Err = Error;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Ok(quick_xml::de::from_str(s)?)
+        Ok(crate::deserialize::from_str(s)?)
     }
 }
 
@@ -94,7 +94,7 @@ impl FromStr for EntitiesDescriptor {
     type Err = Error;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Ok(quick_xml::de::from_str(s)?)
+        Ok(crate::deserialize::from_str(s)?)
     }
 }
 
@@ -197,7 +197,7 @@ impl FromStr for EntityDescriptor {
     type Err = Error;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Ok(quick_xml::de::from_str(s)?)
+        Ok(crate::deserialize::from_str(s)?)
     }
 }
 
