@@ -61,7 +61,7 @@ impl EncryptedAssertion {
                 s[fi..li + 1].to_owned()
             }
         };
-        quick_xml::de::from_str(&assertion_string).map_err(|_e| Error::FailedToDecryptAssertion)
+        crate::deserialize::from_str(&assertion_string).map_err(|_e| Error::FailedToDecryptAssertion)
     }
 }
 

@@ -1,5 +1,6 @@
 pub mod attribute;
 pub mod crypto;
+pub mod deserialize;
 pub mod idp;
 pub mod key_info;
 pub mod metadata;
